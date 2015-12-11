@@ -13,7 +13,7 @@ Planning: https://trello.com/b/z7zYr3xL/tsunami-evacuation
 * HTML
 * CSS
 * JavaScript
-* [Southern California Tsunami Evacuation Resource API](./API.md)
+* [Southern California Tsunami Evacuation Resource API](./tsunami_api/README.md)
 * [Ionic](http://ionicframework.com/docs/)
 * [Angular](https://docs.angularjs.org/api) 
 * [PostgreSQL](http://www.postgresql.org/docs/)
