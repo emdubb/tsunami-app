@@ -4,16 +4,16 @@
 
 What it does
 
-See the research here: [http://jaenichendesign.com/tsunami/]
+See the research here: http://jaenichendesign.com/tsunami/
 
-Planning: [https://trello.com/b/z7zYr3xL/tsunami-evacuation]
+Planning: https://trello.com/b/z7zYr3xL/tsunami-evacuation
 
 ## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
-* [Southern California Tsunami Evacuation Resource API](./API)
+* [Southern California Tsunami Evacuation Resource API](./blob/master/API.md)
 * [Ionic](http://ionicframework.com/docs/)
 * [Angular](https://docs.angularjs.org/api) 
 * [PostgreSQL](http://www.postgresql.org/docs/)
