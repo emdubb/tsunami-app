@@ -41,8 +41,7 @@ Code      | Title                | Reasons for Error
 `400`     | Bad Request          | Not sending JSON as the body; malformed JSON (parse errors).
 `401`     | Unauthorized         | Failed to send authorization credentials (token); malformed credentials.
 `403`     | Forbidden		   	 | Authentication credentials were given, but failed to authorize for this resources.
-`404`     | Not Found            |	Route does not exist; used in place of a 
-                                   `403 Forbidden` for many routes so that unique ids are not "leaked".
+`404`     | Not Found            |	Route does not exist; used in place of a `403 Forbidden` for many routes so that unique ids are not "leaked".
 `422`     | Unprocessable Entity | Sending invalid fields or failing validation on those fields.
 
 ###Data Models
