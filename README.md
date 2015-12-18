@@ -20,7 +20,8 @@ Planning: https://trello.com/b/z7zYr3xL/tsunami-evacuation
 * [Xcode Simulator](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html)
 
 ## Design
-
+![Mockup1](https://i.imgur.com/8xgjiIk.jpg)
+![Mockup2](https://i.imgur.com/df29wVt.jpg)
 ## Get Started
 
 ## Future Features/Next Steps
