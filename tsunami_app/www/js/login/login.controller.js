@@ -16,28 +16,13 @@
       email:    "",
       password: ""
     }
+    vm.token = ""
 
     function login() {
       $log.debug(vm.user.email, vm.user.password);
 
       if (vm.user.email && vm.user.password) {
         $log.debug("credentials valid!");
-        // var userParams = {
-        //   user: {
-        //       email: vm.user.email,
-        //       password: vm.user.password
-        //     }
-        //   }
-
-        // function reqListener () {
-        //   $log.debug(this.responseText);
-        // }
-
-        // var req = new XMLHttpRequest(userParams);
-
-        // req.addEventListener("load", reqListener);
-        // req.open("POST", "http://localhost:3000/api/token");
-        // req.send();
 
         $http({
           method: 'POST',
@@ -50,7 +35,9 @@
             }
           }
         }).then(function successCallback(response) {
-          $log.debug(response);
+          $log.debug(response.data.token);
+          vm.token = response.data.token
+          $state.go("tab.maps")
         }, function errorCallback(response) {
           $log.debug(response);
         });
