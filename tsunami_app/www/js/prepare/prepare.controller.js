@@ -10,7 +10,6 @@
     function PrepareController($state, $log) {
       var vm = this;
 
-      vm.prepareTest = prepareTest
-      var prepareTest = "PrepareController is working!"
+      vm.prepareTest = "PrepareController is working!"
     }
 })();

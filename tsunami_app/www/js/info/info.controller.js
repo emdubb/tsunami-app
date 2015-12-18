@@ -10,7 +10,6 @@
     function InfoController($state, $log) {
       var vm = this;
 
-      vm.infoTest = infoTest
-      var infoTest = "InfoController is working!"
+      vm.infoTest = "InfoController is working!"
     }
 })();

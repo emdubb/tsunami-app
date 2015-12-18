@@ -1,0 +1,15 @@
+<div id="login">
+  <h1>Welcome!{{vm.test}}</h1>
+  <p>Don't have an account? Sign Up!</p>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input ng-model="vm.user.email" type="text" placeholder="email">
+    </label>
+    <label class="item item-input">
+      <input ng-model="vm.user.password "type="password" placeholder="password">
+    </label>
+  </div>
+  <button ng-click="vm.login()" type="submit" class="button button-positive">
+    Login
+  </button>
+</div>

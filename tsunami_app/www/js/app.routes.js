@@ -9,13 +9,13 @@
 
   function AppRoutes($stateProvider, $urlRouterProvider) {
     $stateProvider
-      // setup an abstract state for the tabs directive
-      .state("map", {
-        url: "/test",
-        templateUrl: "templates/tab-maps.html",
-        controller: "MapsController",
-        controllerAs: "vm"
+      .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController',
+        controllerAs: 'vm'
       })
+      // setup an abstract state for the tabs directive
       .state('tab', {
         url: '/tab',
         abstract: true,
@@ -30,14 +30,14 @@
           'tab-maps': {
             templateUrl: 'templates/tab-maps.html',
             controller: 'MapsController',
-            controllerAs: "vm"
+            controllerAs: 'vm'
           }
         }
       })
       .state('tab.mapDetail', {
         url: '/map/:mapId',
         views: {
-          'tab-chats': {
+          'tab-maps-detail': {
             templateUrl: 'templates/map-detail.html',
             controller: 'MapsController',
             controllerAs: "vm"
@@ -57,7 +57,7 @@
     .state('tab.prepare', {
       url: '/prepare',
       views: {
-        'tab-account': {
+        'tab-prepare': {
           templateUrl: 'templates/tab-prepare.html',
           controller: 'PrepareController',
           controllerAs: "vm"
@@ -66,7 +66,7 @@
     });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/test');
+    $urlRouterProvider.otherwise('/login');
 
   }
 

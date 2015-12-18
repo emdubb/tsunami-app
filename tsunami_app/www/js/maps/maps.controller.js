@@ -10,8 +10,7 @@
   function MapsController($state, $log){
     var vm = this;
 
-    vm.mapTest = mapTest
-    var mapTest = "Map controller is working!"
+    vm.mapTest = "Map controller is working!"
   }
 
 })();
