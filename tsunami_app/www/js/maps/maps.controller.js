@@ -5,9 +5,9 @@
     .module("tsunamiApp")
     .controller("MapsController", MapsController);
 
-  MapsController.$inject = ["$state", "$log"]
+  MapsController.$inject = ["$state", "$log", "localStorageService"]
 
-  function MapsController($state, $log){
+  function MapsController($state, $log, localStorageService){
     var vm = this;
 
     vm.mapTest = "Map controller is working!"

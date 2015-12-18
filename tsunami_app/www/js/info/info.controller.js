@@ -5,9 +5,9 @@
     .module("tsunamiApp")
     .controller("InfoController", InfoController);
 
-    InfoController.$inject = ["$state", "$log"]
+    InfoController.$inject = ["$state", "$log", "localStorageService"]
 
-    function InfoController($state, $log) {
+    function InfoController($state, $log, localStorageService) {
       var vm = this;
 
       vm.infoTest = "InfoController is working!"

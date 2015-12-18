@@ -5,9 +5,9 @@
     .module("tsunamiApp")
     .controller("LoginController", LoginController);
 
-  LoginController.$inject = ["$state", "$log", "$http"]
+  LoginController.$inject = ["$state", "$log", "$http", "localStorageService"]
 
-  function LoginController($state, $log, $http) {
+  function LoginController($state, $log, $http, localStorageService) {
     var vm = this;
 
     vm.test = "controller linked!"
@@ -36,7 +36,8 @@
           }
         }).then(function successCallback(response) {
           $log.debug(response.data.token);
-          vm.token = response.data.token
+          localStorageService.saveData('token', response.data.token)
+          // vm.token = response.data.token
           $state.go("tab.maps")
         }, function errorCallback(response) {
           $log.debug(response);
