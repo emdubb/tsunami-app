@@ -34,10 +34,11 @@
           }
         }
       })
-      .state('tab.mapDetail', {
-        url: '/map/:mapId',
+      .state('tab.map-detail', {
+        url: '/maps/coronado',
+        // url: '/maps/:mapId',
         views: {
-          'tab-maps-detail': {
+          'tab-maps': {
             templateUrl: 'templates/map-detail.html',
             controller: 'MapsController',
             controllerAs: "vm"

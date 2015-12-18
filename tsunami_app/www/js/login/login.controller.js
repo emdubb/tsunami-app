@@ -37,7 +37,6 @@
         }).then(function successCallback(response) {
           $log.debug(response.data.token);
           localStorageService.saveData('token', response.data.token)
-          // vm.token = response.data.token
           $state.go("tab.maps")
         }, function errorCallback(response) {
           $log.debug(response);
