@@ -9,7 +9,7 @@
 
   function MapsController($state, $log, $http, localStorageService){
     var vm = this;
-    vm.mapTest = "we linked!"
+    vm.counties = ["San Diego"]
     $http({
       method: 'GET',
       url:  'http://localhost:3000/api/me',
@@ -24,6 +24,20 @@
       }, function errorCallback(response) {
         $log.debug(response);
       });
+
+    $http({
+      method: 'GET',
+      url: 'http://localhost:3000/api/cities',
+      contentType: 'application/json',
+      headers: {
+        'Authorization': localStorageService.loadData('token')
+      }
+    }).then(function successCallback(response){
+      vm.cities = response.data.cities;
+      $log.debug(vm.cities);
+    }, function errorCallback(response) {
+      $log.debug(response)
+    })
 
 
   }

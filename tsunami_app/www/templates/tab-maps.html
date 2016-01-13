@@ -1,18 +1,52 @@
-<ion-view view-title="Maps">
-  <ion-content class="padding">
+<ion-view view-title="Maps" id="maps">
+  <ion-content>
   <ion-list>
-  <p>Hello, {{vm.user.fname}} {{vm.user.lname}}</p>
-    <ion-item>
-      <i class="icon ion-ios-plus-empty balanced"></i>
-      Add a map
+    <ion-item ng-if="vm.userMaps.length < 1">
+      <p>You don't have any saved maps!</p>
     </ion-item>
     <ion-item class="item-icon-right" ng-repeat="map in vm.userMaps" href="#/tab/maps/coronado">
       <h3>{{map.name}}</h3>
       <p>Coronado, San Diego County</p>
         <!-- {{map.city}} -->
         <i class="icon ion-ios-arrow-right balanced"></i>
-      <!-- </a> -->
     </ion-item>
+  </ion-list>
+  <ion-list ng-click="showme = !showme">
+    <ion-item >
+      <i class="icon ion-ios-plus-empty balanced"></i>
+      Add a map
+    </ion-item>
+  </ion-list>
+  <ion-list ng-show="showme">
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Select a county
+      </div>
+      <select>
+        <option ng-repeat="county in vm.counties">{{county}}</option>
+      </select>
+    </label>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Select a city
+      </div>
+      <select>
+        <option ng-repeat="city in vm.cities">{{city.name}}</option>
+      </select>
+    </label>
+<!--     <label class="item item-input item-select">
+      <div class="input-label">
+        Select a Map
+      </div>
+      <select>
+        <option ng-repeat="map in vm.maps">{{map.name}}</option>
+      </select>
+    </label> -->
+    <a href="#/tab/maps/preview">
+      <button type="submit" class="button button-positive">
+        View Map
+      </button>
+    </a>
   </ion-list>
 
   </ion-content>

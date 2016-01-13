@@ -9757,3 +9757,17 @@ a.button {
 
 strong {
   text-transform: uppercase; }
+
+#maps {
+  background-color: #eceff1; }
+
+#maps button {
+  float: right; }
+
+#map-preview button {
+  position: fixed;
+  bottom: 60px;
+  right: 10px; }
+
+.greenText {
+  color: #006964; }

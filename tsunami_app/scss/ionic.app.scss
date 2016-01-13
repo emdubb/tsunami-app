@@ -53,3 +53,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 strong {
   text-transform: uppercase;
 }
+#maps {
+  background-color: $stable;
+}
+#maps button {
+  float: right;
+}
+#map-preview button {
+  position:fixed;
+  bottom: 60px;
+  right: 10px;
+}
+.greenText {
+  color: $calm;
+}
+

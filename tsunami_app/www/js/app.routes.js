@@ -51,6 +51,17 @@
           }
         }
       })
+      .state('tab.map-preview', {
+        url: '/maps/preview',
+        // url: '/maps/:mapId',
+        views: {
+          'tab-maps': {
+            templateUrl: 'templates/map-preview.html',
+            controller: 'MapsController',
+            controllerAs: "vm"
+          }
+        }
+      })
     .state('tab.info', {
       url: '/info',
       views: {
