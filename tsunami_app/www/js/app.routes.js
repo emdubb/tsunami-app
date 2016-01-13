@@ -15,6 +15,12 @@
         controller: 'LoginController',
         controllerAs: 'vm'
       })
+      .state('signup', {
+        url: '/signup',
+        templateUrl: 'templates/signup.html',
+        controller: 'SignupController',
+        controllerAs: 'vm'
+      })
       // setup an abstract state for the tabs directive
       .state('tab', {
         url: '/tab',

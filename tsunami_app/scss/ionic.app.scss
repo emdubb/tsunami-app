@@ -21,14 +21,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
-#login {
+#login, #signup {
   background-color: $balanced;
   color: white;
   text-align: center;
   padding-top: 100px;
 }
 
-#login h1 {
+#login h1, #signup h1 {
   text-align: center;
   color: white;
 }
@@ -37,11 +37,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   border-radius: 0;
   width: 130px;
 }
-#login .list {
+#login .list, #signup .list {
   max-width: 300px;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+.info {
+  max-width: 300px;
+  margin: auto;
+}
+.belowButton {
+  margin-top: 20px;
 }
 strong {
   text-transform: uppercase;

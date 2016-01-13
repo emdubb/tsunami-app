@@ -1,7 +1,6 @@
 {
   "name": "tsunami_app",
-  "app_id": "",
-
+  "app_id": "e055a90f",
   "gulpStartupTasks": [
     "sass",
     "watch"

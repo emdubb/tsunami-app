@@ -43,6 +43,7 @@
         });
       } else {
         $log.debug("invalid credentials");
+        vm.message = "Invalid credentials! Try again."
       }
     }
   }

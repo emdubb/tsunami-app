@@ -1,0 +1,26 @@
+<div id="signup">
+  <h1>Sign Up!</h1>
+  <p class="info">Please fill out the following information to create an account. Please remember all fields are case sesitive.</p>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input ng-model="vm.user.fname" type="text" placeholder="First Name">
+    </label>
+    <label class="item item-input">
+      <input ng-model="vm.user.lname" type="text" placeholder="Last Name">
+    </label>
+    <label class="item item-input">
+      <input ng-model="vm.user.email" type="email" placeholder="Email">
+    </label>
+    <label class="item item-input">
+      <input ng-model="vm.user.password" type="password" placeholder="Password">
+    </label>
+    <label class="item item-input">
+      <input ng-model="vm.user.password_confirm" type="password" placeholder="Password Confirmation">
+    </label>
+  </div>
+  <p>{{vm.message}}</p>
+  <button ng-click="vm.signUp()" type="submit" class="button button-positive">
+    Sign Up!
+  </button>
+  <p class="belowButton">Already have an account? <a ui-sref="login">Login</a></p>
+</div>

@@ -9727,13 +9727,13 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-#login {
+#login, #signup {
   background-color: #26a69a;
   color: white;
   text-align: center;
   padding-top: 100px; }
 
-#login h1 {
+#login h1, #signup h1 {
   text-align: center;
   color: white; }
 
@@ -9742,11 +9742,18 @@ a.button {
   border-radius: 0;
   width: 130px; }
 
-#login .list {
+#login .list, #signup .list {
   max-width: 300px;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px; }
+
+.info {
+  max-width: 300px;
+  margin: auto; }
+
+.belowButton {
+  margin-top: 20px; }
 
 strong {
   text-transform: uppercase; }

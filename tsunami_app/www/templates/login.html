@@ -1,15 +1,17 @@
 <div id="login">
   <h1>Welcome!</h1>
-  <p>Don't have an account? Sign Up!</p>
+  <p>Don't have an account? <a ui-sref="signup">Sign Up!</a></p>
   <div class="list list-inset">
     <label class="item item-input">
-      <input ng-model="vm.user.email" type="text" placeholder="email">
+      <input ng-model="vm.user.email" type="email" placeholder="email">
     </label>
     <label class="item item-input">
       <input ng-model="vm.user.password "type="password" placeholder="password">
     </label>
   </div>
+  <p><small>*All fields are case sensitive</small></p>
   <button ng-click="vm.login()" type="submit" class="button button-positive">
     Login
   </button>
+  <p class="belowButton">{{vm.message}}</p>
 </div>
