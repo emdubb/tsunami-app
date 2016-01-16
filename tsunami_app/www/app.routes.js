@@ -11,13 +11,13 @@
     $stateProvider
       .state('login', {
         url: '/login',
-        templateUrl: 'templates/login.html',
+        templateUrl: 'components/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
       })
       .state('signup', {
         url: '/signup',
-        templateUrl: 'templates/signup.html',
+        templateUrl: 'components/login/signup.html',
         controller: 'SignupController',
         controllerAs: 'vm'
       })
@@ -25,7 +25,7 @@
       .state('tab', {
         url: '/tab',
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'shared/tabs/tabs.html'
       })
 
       // Each tab has its own nav history stack:
@@ -34,7 +34,7 @@
         url: '/maps',
         views: {
           'tab-maps': {
-            templateUrl: 'templates/tab-maps.html',
+            templateUrl: 'components/maps/tab-maps.html',
             controller: 'MapsController',
             controllerAs: 'vm'
           }
@@ -45,18 +45,17 @@
         // url: '/maps/:mapId',
         views: {
           'tab-maps': {
-            templateUrl: 'templates/map-detail.html',
+            templateUrl: 'components/maps/map-detail.html',
             controller: 'MapsController',
             controllerAs: "vm"
           }
         }
       })
       .state('tab.map-preview', {
-        // url: '/maps/preview',
         url: '/maps/preview/:id',
         views: {
           'tab-maps': {
-            templateUrl: 'templates/map-preview.html',
+            templateUrl: 'components/maps/map-preview.html',
             controller: 'MapPreviewController',
             controllerAs: "vm"
           }
@@ -66,7 +65,7 @@
       url: '/info',
       views: {
         'tab-info': {
-          templateUrl: 'templates/tab-info.html',
+          templateUrl: 'components/info/tab-info.html',
           controller: 'InfoController',
           controllerAs: "vm"
         }
@@ -76,7 +75,7 @@
       url: '/prepare',
       views: {
         'tab-prepare': {
-          templateUrl: 'templates/tab-prepare.html',
+          templateUrl: 'components/prepare/tab-prepare.html',
           controller: 'PrepareController',
           controllerAs: "vm"
         }

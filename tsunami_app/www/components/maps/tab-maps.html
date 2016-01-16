@@ -30,18 +30,21 @@
       <div class="input-label">
         Select a city
       </div>
-      <select ng-model="vm.cityName">
-        <option ng-repeat="city in vm.cities">{{city.name}}</option>
+      <select ng-model="vm.city" ng-options="city.name for city in vm.cities">
       </select>
     </label>
-<!--     <label ng-if="vm.maps.length > 1" class="item item-input item-select">
+
+    <label class="item item-input item-select">
       <div class="input-label">
         Select a Map
       </div>
-      <select>
-        <option ng-repeat="map in vm.maps">{{map.name}}</option>
+       <span ng-repeat="city in vm.cities | filter:{id: vm.city.id}">
+      <select ng-model="vm.map">
+         <option ng-repeat="map in city.maps">{{map.map_name}}</option>
       </select>
-    </label> -->
+       </span>
+    </label>
+
     <!-- <a href="#/tab/maps/preview"> -->
       <button type="submit" ng-click="vm.previewMap()" class="button button-positive">
         View Map

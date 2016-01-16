@@ -38,11 +38,13 @@
       }
     }).then(function successCallback(response){
       vm.cities = response.data.cities;
+      $log.log(response.data)
     }, function errorCallback(response) {
       $log.debug(response)
     })
 
     function previewMap() {
+      $log.log(vm.map)
       localStorageService.saveData('name', vm.cityName)
     }
 
