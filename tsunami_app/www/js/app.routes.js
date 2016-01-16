@@ -52,12 +52,12 @@
         }
       })
       .state('tab.map-preview', {
-        url: '/maps/preview',
-        // url: '/maps/:mapId',
+        // url: '/maps/preview',
+        url: '/maps/preview/:id',
         views: {
           'tab-maps': {
             templateUrl: 'templates/map-preview.html',
-            controller: 'MapsController',
+            controller: 'MapPreviewController',
             controllerAs: "vm"
           }
         }

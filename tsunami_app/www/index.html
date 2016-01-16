@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- <base href="/#"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Tsunami Evacuation</title>
@@ -8,16 +9,19 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
     <!-- your app's js -->
     <script src="js/app.module.js"></script>
     <script src="js/app.routes.js"></script>
     <script src="js/localStorage.service.js"></script>
+    <script src="js/maps.service.js"></script>
     <script src="js/login/login.controller.js"></script>
     <script src="js/login/signup.controller.js"></script>
     <script src="js/info/info.controller.js"></script>
     <script src="js/maps/maps.controller.js"></script>
+    <script src="js/maps/mapPreview.controller.js"></script>
     <script src="js/prepare/prepare.controller.js"></script>
   </head>
   <body ng-app="tsunamiApp">

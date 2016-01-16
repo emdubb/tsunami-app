@@ -2,7 +2,13 @@
   "use strict"
 
   angular
-    .module('tsunamiApp', ['ionic'])
+    .module('tsunamiApp', ['ionic', 'ngRoute'])
+    // .config(function($locationProvider){
+    //   $locationProvider.html5Mode({
+    //     enabled: true,
+    //     requireBase: true
+    //   });
+    // })
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {

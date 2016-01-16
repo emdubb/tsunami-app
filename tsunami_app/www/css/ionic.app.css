@@ -9764,6 +9764,12 @@ strong {
 #maps button {
   float: right; }
 
+#map-preview {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-origin: border-box;
+  background-size: cover; }
+
 #map-preview button {
   position: fixed;
   bottom: 60px;
