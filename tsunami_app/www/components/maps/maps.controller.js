@@ -25,9 +25,10 @@
         $log.debug(response.data.maps);
         vm.user = response.data
         vm.userMaps = response.data.maps
+        localStorageService.saveData('user', response.data.id)
       }, function errorCallback(response) {
         $log.debug(response);
-      });
+    });
 
     $http({
       method: 'GET',
@@ -44,7 +45,7 @@
     })
 
     function previewMap() {
-      localStorageService.saveData('name', vm.city.name)
+      localStorageService.saveData('map', vm.map.id)
       $state.go("tab.map-preview", {"id": vm.map.id})
     }
 
