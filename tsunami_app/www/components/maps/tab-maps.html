@@ -22,8 +22,7 @@
       <div class="input-label">
         Select a county
       </div>
-      <select ng-model="vm.countyName">
-        <option ng-repeat="county in vm.counties">{{county}}</option>
+      <select ng-model="vm.countyName" ng-options="county for county in vm.counties">
       </select>
     </label>
     <label class="item item-input item-select">
@@ -34,15 +33,16 @@
       </select>
     </label>
 
+
     <label class="item item-input item-select">
       <div class="input-label">
         Select a Map
       </div>
-       <span ng-repeat="city in vm.cities | filter:{id: vm.city.id}">
-      <select ng-model="vm.map">
-         <option ng-repeat="map in city.maps">{{map.map_name}}</option>
-      </select>
-       </span>
+      <span ng-repeat="city in vm.cities | filter:{id: vm.city.id}">
+      <input type="hidden" ng-model="map" />
+        <select ng-model="vm.map" ng-options="map.map_name for map in city.maps">
+        </select>
+      </span>
     </label>
 
     <!-- <a href="#/tab/maps/preview"> -->

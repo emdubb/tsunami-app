@@ -44,8 +44,8 @@
     })
 
     function previewMap() {
-      $log.log(vm.map)
-      localStorageService.saveData('name', vm.cityName)
+      localStorageService.saveData('name', vm.city.name)
+      $state.go("tab.map-preview", {"id": vm.map.id})
     }
 
   }
