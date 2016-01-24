@@ -1,0 +1,3 @@
+[submodule "tsunami-api"]
+	path = tsunami-api
+	url = https://github.com/emdubb/tsunami-api.git
