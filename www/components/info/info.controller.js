@@ -12,7 +12,7 @@
 
       $http({
         method: 'GET',
-        url:  'http://localhost:3000/api/me',
+        url:  'http://107.170.252.219/api/me',
         contentType: "application/json",
         headers: {
           'Authorization': localStorageService.loadData('token')

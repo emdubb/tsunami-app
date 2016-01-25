@@ -14,7 +14,7 @@
 
     $http({
       method: 'GET',
-      url: 'http://localhost:3000/api/maps/' + localStorageService.loadData('map'),
+      url: 'http://107.170.252.219/api/maps/' + localStorageService.loadData('map'),
       contentType: 'application/json',
       headers: {
         'Authorization': localStorageService.loadData('token')
@@ -33,7 +33,7 @@
       $log.log("add map!")
       $http({
         method: 'PATCH',
-        url: 'http://localhost:3000/api/users/' + localStorageService.loadData("user") + '?map_id=' + vm.mapPreview.id + '&add=true',
+        url: 'http://107.170.252.219/api/users/' + localStorageService.loadData("user") + '?map_id=' + vm.mapPreview.id + '&add=true',
         contentType: 'application/json',
         headers: {
           'Authorization': localStorageService.loadData('token')

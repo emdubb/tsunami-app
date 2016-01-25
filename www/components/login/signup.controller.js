@@ -36,7 +36,7 @@
       if (vm.user.email && vm.user.password && vm.user.fname && vm.user.lname) {
         $http({
           method: 'POST',
-          url: 'http://localhost:3000/api/users',
+          url: 'http://107.170.252.219/api/users',
           contentType: "application/json",
           data: {
             user: {

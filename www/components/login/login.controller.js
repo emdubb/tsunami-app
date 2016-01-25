@@ -26,7 +26,7 @@
 
         $http({
           method: 'POST',
-          url:  'http://localhost:3000/api/token',
+          url:  'http://107.170.252.219/api/token',
           contentType: "application/json",
           data: {
             user: {
