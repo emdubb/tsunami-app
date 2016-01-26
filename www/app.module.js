@@ -2,7 +2,7 @@
   "use strict"
 
   angular
-    .module('tsunamiApp', ['ionic', 'ngRoute'])
+    .module('tsunamiApp', ['ionic'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
