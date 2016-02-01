@@ -1,11 +1,11 @@
 <ion-view view-title="Maps" id="maps">
   <ion-content>
   <ion-list>
-    <ion-item ng-if="vm.userMaps.length < 1">
+    <ion-item ng-if="vm.user.map.length < 1">
       <p>You don't have any saved maps!</p>
     </ion-item>
-    <ion-item class="item-icon-right" ng-repeat="map in vm.userMaps">
-    <!-- <ion-item class="item-icon-right" ng-repeat="map in vm.userMaps" href="#/tab/maps/coronado"> -->
+    <ion-item class="item-icon-right" ng-repeat="map in vm.user.maps">
+    <!-- <ion-item class="item-icon-right" ng-repeat="map in vm.user.maps" href="#/tab/maps/coronado"> -->
       <h3>{{map.name}}</h3>
       <p>Coronado, San Diego County</p>
         <!-- {{map.city}} -->
