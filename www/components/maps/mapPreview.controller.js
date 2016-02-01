@@ -30,7 +30,7 @@
       $log.log(response)
     })
 
-    function mapTest() {
+    function addMap() {
       $log.log("add map!")
       $http({
         method: 'PATCH',
