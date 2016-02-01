@@ -5,13 +5,13 @@
     .module("tsunamiApp")
     .controller("MapPreviewController", MapPreviewController)
 
-  MapPreviewController.$inject = ["$state", "$log", "$http", "$ionicPopup", "localStorageService", "urlFactory"]
+  MapPreviewController.$inject = ["$state", "$log", "$http", "$ionicPopup", "localStorageService", "urlFactory", "currentUser"]
 
-  function MapPreviewController($state, $log, $http, $ionicPopup, localStorageService, urlFactory) {
+  function MapPreviewController($state, $log, $http, $ionicPopup, localStorageService, urlFactory, currentUser) {
     var vm = this;
     var url = urlFactory
-    vm.mapTest = mapTest
-    vm.mapPreview
+    vm.addMap = addMap
+    vm.mapPreview = {}
 
     $http({
       method: 'GET',
@@ -21,8 +21,8 @@
         'Authorization': localStorageService.loadData('token')
       }
     }).then(function successCallback(response){
-      $log.log(response.data)
       vm.mapPreview = response.data
+      $log.log("map: ", vm.mapPreview)
       angular.element(document.querySelector('#map-preview')).css({
             'background-image': 'url(' + vm.mapPreview.map_url +')'
         });
@@ -43,6 +43,7 @@
         var alertPopup = $ionicPopup.alert({
           title: 'Map successfully saved!',
         });
+        currentUser.addMap(vm.mapPreview)
         alertPopup.then(function(res) {
           $state.go('tab.maps')
         });
