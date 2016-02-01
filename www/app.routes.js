@@ -40,17 +40,16 @@
           }
         }
       })
-      // .state('tab.map-detail', {
-      //   url: '/maps/coronado',
-      //   // url: '/maps/:mapId',
-      //   views: {
-      //     'tab-maps': {
-      //       templateUrl: 'components/maps/map-detail.html',
-      //       controller: 'MapsController',
-      //       controllerAs: "vm"
-      //     }
-      //   }
-      // })
+      .state('tab.map-detail', {
+        url: '/maps/detail/:id',
+        views: {
+          'tab-maps': {
+            templateUrl: 'components/maps/map-detail.html',
+            controller: 'MapDetailController',
+            controllerAs: "vm"
+          }
+        }
+      })
       .state('tab.map-preview', {
         url: '/maps/preview/:id',
         views: {
