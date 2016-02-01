@@ -5,18 +5,18 @@
     .module("tsunamiApp")
     .controller("MapsController", MapsController);
 
-  MapsController.$inject = ["$state", "$log", "$http", "localStorageService"]
+  MapsController.$inject = ["$state", "$log", "$http", "localStorageService", "urlFactory"]
 
-  function MapsController($state, $log, $http, localStorageService){
+  function MapsController($state, $log, $http, localStorageService, urlFactory){
 
     var vm = this;
-    vm.test = "test"
+    var url = urlFactory
     vm.counties = ["San Diego"]
     vm.previewMap = previewMap;
 
     $http({
       method: 'GET',
-      url:  'http://107.170.252.219/api/me',
+      url:  url + '/me',
       contentType: "application/json",
       headers: {
         'Authorization': localStorageService.loadData('token')
@@ -32,7 +32,7 @@
 
     $http({
       method: 'GET',
-      url: 'http://107.170.252.219/api/cities',
+      url: url + '/cities',
       contentType: 'application/json',
       headers: {
         'Authorization': localStorageService.loadData('token')

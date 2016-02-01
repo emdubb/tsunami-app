@@ -5,14 +5,15 @@
     .module("tsunamiApp")
     .controller("InfoController", InfoController);
 
-    InfoController.$inject = ["$state", "$log", "$http", "localStorageService"]
+    InfoController.$inject = ["$state", "$log", "$http", "localStorageService", "urlFactory"]
 
-    function InfoController($state, $log, $http, localStorageService) {
+    function InfoController($state, $log, $http, localStorageService, urlFactory) {
       var vm = this;
+      var url = urlFactory
 
       $http({
         method: 'GET',
-        url:  'http://107.170.252.219/api/me',
+        url:  url + '/me',
         contentType: "application/json",
         headers: {
           'Authorization': localStorageService.loadData('token')

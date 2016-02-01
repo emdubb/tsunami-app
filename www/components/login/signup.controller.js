@@ -5,10 +5,11 @@
     .module("tsunamiApp")
     .controller("SignupController", SignupController);
 
-  SignupController.$inject = ["$state", "$log", "$http", "localStorageService"]
+  SignupController.$inject = ["$state", "$log", "$http", "localStorageService", "urlFactory"]
 
-  function SignupController($state, $log, $http, localStorageService) {
+  function SignupController($state, $log, $http, localStorageService, urlFactory) {
     var vm = this;
+    var url = urlFactory
 
     vm.test = "controller linked!"
     vm.signUp = signUp;
@@ -36,7 +37,7 @@
       if (vm.user.email && vm.user.password && vm.user.fname && vm.user.lname) {
         $http({
           method: 'POST',
-          url: 'http://107.170.252.219/api/users',
+          url: url + '/users',
           contentType: "application/json",
           data: {
             user: {

@@ -5,16 +5,17 @@
     .module("tsunamiApp")
     .controller("MapPreviewController", MapPreviewController)
 
-  MapPreviewController.$inject = ["$state", "$log", "$http", "$ionicPopup", "localStorageService"]
+  MapPreviewController.$inject = ["$state", "$log", "$http", "$ionicPopup", "localStorageService", "urlFactory"]
 
-  function MapPreviewController($state, $log, $http, $ionicPopup, localStorageService) {
+  function MapPreviewController($state, $log, $http, $ionicPopup, localStorageService, urlFactory) {
     var vm = this;
+    var url = urlFactory
     vm.mapTest = mapTest
     vm.mapPreview
 
     $http({
       method: 'GET',
-      url: 'http://107.170.252.219/api/maps/' + localStorageService.loadData('map'),
+      url: url + '/maps/' + localStorageService.loadData('map'),
       contentType: 'application/json',
       headers: {
         'Authorization': localStorageService.loadData('token')
@@ -33,7 +34,7 @@
       $log.log("add map!")
       $http({
         method: 'PATCH',
-        url: 'http://107.170.252.219/api/users/' + localStorageService.loadData("user") + '?map_id=' + vm.mapPreview.id + '&add=true',
+        url: url + '/users/' + localStorageService.loadData("user") + '?map_id=' + vm.mapPreview.id + '&add=true',
         contentType: 'application/json',
         headers: {
           'Authorization': localStorageService.loadData('token')
