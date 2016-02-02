@@ -9764,7 +9764,7 @@ strong {
 #maps button {
   float: right; }
 
-#map-preview {
+#map-preview, #map-detail {
   background-repeat: no-repeat;
   background-position: top;
   background-origin: border-box;
