@@ -12,7 +12,8 @@
     var vm = this;
     var url = urlFactory
     vm.counties = ["San Diego"]
-    vm.previewMap = previewMap;
+    vm.previewMap = previewMap
+    vm.showMap = showMap
     vm.user = currentUser.user
 
     $http({
@@ -45,8 +46,13 @@
     })
 
     function previewMap() {
-      localStorageService.saveData('map', vm.map.id)
+      localStorageService.saveData("map", vm.map.id)
       $state.go("tab.map-preview", {"id": vm.map.id})
+    }
+
+    function showMap(id) {
+      localStorageService.saveData("map", id)
+      $state.go("tab.map-detail", {"id": id})
     }
 
   }
