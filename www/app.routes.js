@@ -40,26 +40,6 @@
           }
         }
       })
-      .state('tab.map-detail', {
-        url: '/maps/detail/:id',
-        views: {
-          'tab-maps': {
-            templateUrl: 'components/maps/map-detail.html',
-            controller: 'MapDetailController',
-            controllerAs: "vm"
-          }
-        }
-      })
-      .state('tab.map-preview', {
-        url: '/maps/preview/:id',
-        views: {
-          'tab-maps': {
-            templateUrl: 'components/maps/map-preview.html',
-            controller: 'MapPreviewController',
-            controllerAs: "vm"
-          }
-        }
-      })
     .state('tab.info', {
       url: '/info',
       views: {
