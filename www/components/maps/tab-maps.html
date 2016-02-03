@@ -4,22 +4,21 @@
     <ion-item ng-if="vm.user.map.length < 1">
       <p>You don't have any saved maps!</p>
     </ion-item>
-    <ion-item class="item-icon-right" ng-repeat="map in vm.user.maps" ng-click="vm.showMap(map.id)">
+    <ion-item class="item-icon-right" ng-repeat="map in vm.user.maps" ng-click="openDetailModal(map)">
     <!-- <ion-item class="item-icon-right" ng-repeat="map in vm.user.maps" href="#/tab/maps/coronado"> -->
       <h3>City {{map.city_id}} - {{map.name}}</h3>
       <p>San Diego County</p>
-        <!-- {{map.city}} -->
-        <i class="icon ion-ios-arrow-right balanced"></i>
+        <i class="icon ion-ios-arrow-down balanced"></i>
     </ion-item>
   </ion-list>
-  <ion-list ng-click="showme = !showme">
+  <ion-list ng-click="vm.showme = !vm.showme">
     <ion-item >
       <i class="icon ion-ios-plus-empty balanced"></i>
       Add a map
     </ion-item>
   </ion-list>
-  <ion-list ng-show="showme">
-    <label class="item item-input item-select">
+  <ion-list ng-show="vm.showme">
+    <label ng-if="vm.counties.length > 1" class="item item-input item-select">
       <div class="input-label">
         Select a county
       </div>
@@ -41,16 +40,14 @@
       </div>
       <span ng-repeat="city in vm.cities | filter:{id: vm.city.id}">
       <input type="hidden" ng-model="map" />
-        <select ng-model="vm.map" ng-options="map.map_name for map in city.maps">
+        <select ng-model="vm.previewMap" ng-options="map.name for map in city.maps">
         </select>
       </span>
     </label>
 
-    <!-- <a href="#/tab/maps/preview"> -->
-      <button type="submit" ng-click="vm.previewMap()" class="button button-positive">
-        View Map
-      </button>
-    <!-- </a> -->
+    <button type="submit" ng-click="openPreviewModal()" class="button button-positive">
+      View Map
+    </button>
   </ion-list>
   </ion-content>
 </ion-view>
