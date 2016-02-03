@@ -9767,8 +9767,10 @@ strong {
 #maps button {
   float: right; }
 
-#map-preview img, #map-detail img {
-  min-width: 100%; }
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .add-button {
   position: fixed;
