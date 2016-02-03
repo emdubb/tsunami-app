@@ -23,7 +23,7 @@
 
     function addMap(dbMap){
       $log.log("adding map: ", dbMap)
-      user.maps.push(dbMap)
+      user.maps.unshift(dbMap)
     }
   }
 
