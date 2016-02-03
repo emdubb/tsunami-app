@@ -1,0 +1,14 @@
+<ion-modal-view id="map-detail">
+  <ion-header-bar>
+    <h1 class="title">City {{vm.mapDetail.city_id}} - {{vm.mapDetail.name}}</h1>
+    <div class="buttons">
+      <button class="button button-clear modal-nav-button" ng-click="closeDetailModal()">
+        <i class="icon ion-ios-close-empty"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <img ng-src="{{vm.mapDetail.map_url}}" alt="Map Preview"/>
+  </ion-content>
+</ion-modal-view>
+

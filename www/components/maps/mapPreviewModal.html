@@ -1,0 +1,16 @@
+<ion-modal-view id="map-preview">
+  <ion-header-bar>
+    <h1 class="title">City {{vm.previewMap.city_id}} - {{vm.previewMap.name}}</h1>
+    <div class="buttons">
+      <button class="button button-clear modal-nav-button" ng-click="closePreviewModal()">
+        <i class="icon ion-ios-close-empty"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  <img ng-src="{{vm.previewMap.map_url}}" alt="Map Preview" />
+  </ion-content>
+  <button ng-click="vm.addMap()" class="button button-positive button-block add-button">
+    Add Map
+  </button>
+</ion-modal-view>
