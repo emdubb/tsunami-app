@@ -9770,7 +9770,8 @@ strong {
 .parent {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  height: 100vh; }
 
 .add-button {
   position: fixed;
