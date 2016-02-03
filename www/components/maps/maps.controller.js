@@ -138,10 +138,16 @@
           $scope.closePreviewModal()
           // $ionicScrollDelegate.scrollTop();
         });
-      }, function errorCallback(response){
-        var alertPopup = $ionicPopup.alert({
-          title: 'Uh oh, something went wrong! Please try again.',
-        });
+      }, function errorCallback(error){
+        if (error.status === 409) {
+          var alertPopup = $ionicPopup.alert({
+            title: error.data,
+          });
+        } else {
+          var alertPopup = $ionicPopup.alert({
+            title: 'Uh oh, something went wrong! Please try again.',
+          });
+        }
       });
     };
 
