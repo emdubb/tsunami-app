@@ -9758,22 +9758,24 @@ a.button {
 strong {
   text-transform: uppercase; }
 
+.modal-nav-button {
+  width: 50px; }
+
 #maps {
   background-color: #eceff1; }
 
 #maps button {
   float: right; }
 
-#map-preview, #map-detail {
-  background-repeat: no-repeat;
-  background-position: top;
-  background-origin: border-box;
-  background-size: cover; }
+#map-preview img, #map-detail img {
+  min-width: 100%; }
 
-#map-preview button {
+.add-button {
   position: fixed;
-  bottom: 60px;
-  right: 10px; }
+  bottom: 0px; }
+
+.button.button-block, .button.button-full {
+  margin-bottom: 0; }
 
 .greenText {
   color: #006964; }
