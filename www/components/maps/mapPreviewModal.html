@@ -7,9 +7,9 @@
       </button>
     </div>
   </ion-header-bar>
-  <ion-content>
-  <img ng-src="{{vm.previewMap.map_url}}" alt="Map Preview" />
-  </ion-content>
+  <ion-scroll class="parent" delegate-handle="mapZoom" zooming="true" min-zoom="1" direction="xy" scrollbar-x="false" scrollbar-y="false">
+    <img ng-src="{{vm.previewMap.map_url}}" on-double-tap="vm.onDoubleTap()" alt="Map Preview"/>
+  </ion-scroll>
   <button ng-click="vm.addMap()" class="button button-positive button-block add-button">
     Add Map
   </button>
